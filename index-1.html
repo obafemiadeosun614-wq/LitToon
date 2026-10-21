@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LitToon – Literature made easy for SS1–SS3</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBFAF4;--ink:#16241C;--muted:#4C5B52;--green:#0F5B3A;--chalk:#F2C94C;--card:#FFFFFF;--line:#D8DCCB;--on-green:#FFFFFF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1712;--ink:#EEF2E6;--muted:#A9B8AC;--green:#2E9E6A;--card:#16241C;--line:#2A3A30}}
+:root[data-theme="dark"]{--bg:#0E1712;--ink:#EEF2E6;--muted:#A9B8AC;--green:#2E9E6A;--card:#16241C;--line:#2A3A30}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Lexend',system-ui,sans-serif;line-height:1.65;font-size:17px}
+main{max-width:640px;margin:0 auto;padding:20px 18px 60px}
+header{background:var(--green);color:var(--on-green);border-radius:18px;padding:26px 22px;margin-bottom:22px}
+header h1{margin:0 0 6px;font-size:1.7rem;font-weight:800;line-height:1.2}
+header p{margin:0;opacity:.92}
+.chips{display:flex;gap:8px;margin:0 0 22px;overflow-x:auto;padding-bottom:4px}
+.chips span{white-space:nowrap;border:1.5px solid var(--line);border-radius:99px;padding:6px 14px;font-size:.9rem;color:var(--muted)}
+.chips span.on{background:var(--chalk);border-color:var(--chalk);color:#16241C;font-weight:600}
+h2{font-size:1.25rem;margin:30px 0 10px}
+.sum li{margin:0 0 12px}
+.sum{padding-left:20px}
+.words{display:grid;gap:10px}
+.words div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.words b{color:var(--green)}
+.video{background:#0E1712;color:#EEF2E6;border-radius:16px;overflow:hidden}
+.screen{aspect-ratio:16/9;display:grid;place-items:center;text-align:center;padding:16px;background:linear-gradient(135deg,#0F5B3A,#16241C)}
+.screen strong{display:block;font-size:1.05rem}
+.screen small{opacity:.8}
+.scenes{display:grid;gap:0}
+.scene{padding:12px 16px;border-top:1px solid #2A3A30;font-size:.95rem}
+.scene b{color:var(--chalk)}
+.q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 12px}
+.q p{margin:0 0 10px;font-weight:600}
+.q button{display:block;width:100%;text-align:left;font:inherit;color:var(--ink);background:transparent;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 8px;cursor:pointer}
+.q button:focus-visible{outline:3px solid var(--chalk);outline-offset:2px}
+.q button.right{background:var(--green);border-color:var(--green);color:#fff}
+.q button.wrong{border-color:#C0392B;color:#C0392B}
+.fb{min-height:1.4em;margin:4px 0 0;font-size:.92rem;color:var(--muted)}
+footer{margin-top:34px;color:var(--muted);font-size:.85rem}
+.stage{aspect-ratio:16/9;background:#000}.stage svg{width:100%;height:100%;display:block}
+.sc{opacity:0;transition:opacity .6s}.sc.on{opacity:1}
+.sc.on .crowd{animation:walk 6s linear infinite}.sc.on .appr{animation:appr 4s ease-out forwards}
+@keyframes walk{from{transform:translateX(0)}to{transform:translateX(-380px)}}
+@keyframes appr{from{transform:translateX(150px)}to{transform:translateX(0)}}
+.cap{padding:14px 16px 8px;font-size:.98rem;min-height:5.6em}
+.ctl{display:flex;align-items:center;gap:8px;padding:0 16px 14px}
+.ctl .pp{font:inherit;background:var(--chalk);color:#16241C;border:0;border-radius:99px;padding:8px 18px;font-weight:600;cursor:pointer}
+.dots{display:flex;gap:8px;margin-left:auto}.dot{width:14px;height:14px;border-radius:50%;border:0;padding:0;background:#2A3A30;cursor:pointer}.dot.on{background:var(--chalk)}
+.ctl button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.sc.on .crowd,.sc.on .appr{animation:none}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>LitToon</h1>
+<p>Read the summary. Watch the video. Understand your literature text.</p>
+</header>
+
+<div class="chips" aria-label="Text type"><span class="on">Novel</span><span>Drama (soon)</span><span>Poetry (soon)</span></div>
+
+<p style="margin:0 0 4px;color:var(--muted)">Demo text</p>
+<h1 style="font-size:1.5rem;margin:0 0 2px;line-height:1.25">Redemption Road</h1>
+<p style="margin:0;color:var(--muted)">by Elma Shaw · Chapter 1</p>
+
+<h2>Chapter 1 in plain English</h2>
+<ol class="sum">
+<li>Ten years after the civil war, Bendu Lewis and her family hold a remembrance for her grandmother, <b>Granny May</b>.</li>
+<li>Granny May's body was never found. So the family buries a coffin holding her belongings, like her Bible and photos, as a symbol.</li>
+<li>Bendu remembers the war. She pushed her sick grandmother in a wheelbarrow while crowds ran for safety. People told her to leave Granny May behind, but she refused.</li>
+<li>Granny May died on the road. Bendu was crying beside her and did not notice about thirty rebel soldiers coming.</li>
+<li>The soldiers treated her roughly. Their leader, <b>Commander Cobra</b>, stopped one soldier from hitting her, then questioned her and ordered her to join them.</li>
+<li>Back in the present, friends and family comfort Bendu. She is thankful, but she is hurting because she cannot tell them everything.</li>
+</ol>
+
+<h2>Words to know</h2>
+<div class="words">
+<div><b>Remembrance:</b> a gathering to honour someone who has died.</div>
+<div><b>Symbolic:</b> standing for something else. The coffin stands for Granny May because her body was never found.</div>
+<div><b>Flashback:</b> when the story jumps back to an earlier time. Chapter 1 does this with the war memory.</div>
+<div><b>Hint to notice:</b> Bendu feels she cannot tell everyone everything. The author is hinting at a secret.</div>
+</div>
+
+<h2>Watch the story</h2>
+<div class="video">
+<div class="stage"><svg viewBox="0 0 320 180" role="img" aria-label="Animated scenes from Chapter 1">
+<defs><symbol id="f" overflow="visible"><circle cx="0" cy="-26" r="6"/><rect x="-5" y="-20" width="10" height="22" rx="4"/></symbol>
+<linearGradient id="d" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B2A4A"/><stop offset="1" stop-color="#F2A65A"/></linearGradient></defs>
+<g class="sc on"><rect width="320" height="180" fill="url(#d)"/><rect y="135" width="320" height="45" fill="#2B2118"/><rect x="125" y="114" width="70" height="22" rx="3" fill="#7A4B2A"/><rect x="146" y="102" width="14" height="12" fill="#F2C94C"/><rect x="170" y="105" width="10" height="9" fill="#EEF2E6"/><use href="#f" transform="translate(60 140) scale(1.6)" fill="#14100E"/><use href="#f" transform="translate(255 140) scale(1.6)" fill="#14100E"/><use href="#f" transform="translate(282 140) scale(1.6)" fill="#14100E"/><use href="#f" transform="translate(100 140) scale(1.6)" fill="#F2C94C"/></g>
+<g class="sc"><rect width="320" height="180" fill="#B9C4C9"/><rect y="135" width="320" height="45" fill="#5A4A3A"/><rect x="150" y="108" width="40" height="14" fill="#8A6A4A"/><circle cx="180" cy="128" r="8" fill="#222"/><rect x="154" y="101" width="28" height="8" rx="4" fill="#EEF2E6"/><circle cx="184" cy="103" r="5" fill="#EEF2E6"/><path d="M146 114 L134 112" stroke="#222" stroke-width="3"/><use href="#f" transform="translate(124 140) scale(1.6)" fill="#F2C94C"/><g class="crowd"><use href="#f" transform="translate(340 140) scale(1.5)" fill="#14100E"/><use href="#f" transform="translate(385 140) scale(1.4)" fill="#14100E"/><use href="#f" transform="translate(430 140) scale(1.5)" fill="#14100E"/></g></g>
+<g class="sc"><rect width="320" height="180" fill="#6E6A66"/><rect y="135" width="320" height="45" fill="#4A3C30"/><rect x="110" y="108" width="40" height="14" fill="#8A6A4A"/><circle cx="140" cy="128" r="8" fill="#222"/><rect x="114" y="101" width="28" height="8" rx="4" fill="#EEF2E6"/><circle cx="144" cy="103" r="5" fill="#EEF2E6"/><use href="#f" transform="translate(90 140) scale(1.3)" fill="#F2C94C"/><g class="appr"><use href="#f" transform="translate(220 140) scale(1.6)" fill="#14100E"/><use href="#f" transform="translate(248 140) scale(1.6)" fill="#14100E"/><use href="#f" transform="translate(276 140) scale(1.6)" fill="#14100E"/><use href="#f" transform="translate(304 140) scale(1.6)" fill="#14100E"/></g></g>
+<g class="sc"><rect width="320" height="180" fill="#55504C"/><rect y="135" width="320" height="45" fill="#3E3228"/><use href="#f" transform="translate(80 140) scale(1.6)" fill="#F2C94C"/><use href="#f" transform="translate(170 140) scale(1.9)" fill="#C0392B"/><path d="M178 106 L222 100" stroke="#C0392B" stroke-width="4" stroke-linecap="round"/><use href="#f" transform="translate(240 140) scale(1.6)" fill="#14100E"/><use href="#f" transform="translate(285 140) scale(1.6)" fill="#14100E"/></g>
+</svg></div>
+<div class="cap" aria-live="polite"></div>
+<div class="ctl"><button class="pp">Pause</button><div class="dots"><button class="dot on" aria-label="Scene 1"></button><button class="dot" aria-label="Scene 2"></button><button class="dot" aria-label="Scene 3"></button><button class="dot" aria-label="Scene 4"></button></div></div>
+</div>
+
+<h2>Check yourself</h2>
+<div class="q" data-a="0"><p>Why does the family bury a coffin of belongings?</p>
+<button>Granny May's body was never found</button><button>Granny May is still alive</button><button>It is the law</button><div class="fb"></div></div>
+<div class="q" data-a="0"><p>What did people urge Bendu to do while fleeing?</p>
+<button>Leave Granny May behind</button><button>Join the soldiers</button><button>Go back home</button><div class="fb"></div></div>
+
+<footer>ChapterClear is a student project for the Badagry Builder Challenge. Summaries are written in original words to help students understand, not replace the book.</footer>
+</main>
+<script>
+document.querySelectorAll('.q').forEach(function(q){
+  var a=+q.dataset.a, fb=q.querySelector('.fb');
+  q.querySelectorAll('button').forEach(function(b,i){
+    b.addEventListener('click',function(){
+      q.querySelectorAll('button').forEach(function(x){x.classList.remove('right','wrong')});
+      if(i===a){b.classList.add('right');fb.textContent='Correct.'}
+      else{b.classList.add('wrong');fb.textContent='Not quite. Try again.'}
+    });
+  });
+});
+(function(){
+var caps=['Ten years after the war, Bendu’s family remembers Granny May. Her body was never found, so they bury a coffin with her Bible and photos.','Flashback: during the war, Bendu pushes her sick grandmother in a wheelbarrow. People tell her to leave Granny May. Bendu says no.','Granny May dies on the road. Bendu cries beside her and does not notice the rebel soldiers coming.','Commander Cobra stops one soldier from hitting Bendu. Then he orders her to come with them.'];
+var sc=document.querySelectorAll('.sc'),dots=document.querySelectorAll('.dot'),cap=document.querySelector('.cap'),pp=document.querySelector('.pp'),cur=0,t=null;
+function show(i){cur=i;sc.forEach(function(s,k){s.classList.toggle('on',k===i)});dots.forEach(function(d,k){d.classList.toggle('on',k===i)});cap.textContent=caps[i]}
+function play(){clearInterval(t);t=setInterval(function(){show((cur+1)%4)},6500);pp.textContent='Pause'}
+function stop(){clearInterval(t);t=null;pp.textContent='Play'}
+pp.addEventListener('click',function(){t?stop():play()});
+dots.forEach(function(d,k){d.addEventListener('click',function(){show(k);if(t)play()})});
+show(0);
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches){stop()}else{play()}
+})();
+</script>
+</body>
+</html>
